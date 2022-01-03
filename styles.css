@@ -1,0 +1,249 @@
+html {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.3vw;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+sidebar {
+  order: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  max-width: 30%;
+
+  background: rgb(23, 23, 23);
+  background: linear-gradient(
+    149deg,
+    rgb(23, 23, 23) 0%,
+    rgba(122, 122, 122, 1) 100%
+  );
+  color: white;
+  padding: 3%;
+}
+sidebar h2 {
+  border-color: white;
+}
+sidebar a {
+  color: white;
+}
+
+main {
+  order: 1;
+  padding: 0 3%;
+}
+
+section {
+  width: 100%;
+  margin: 0 0 3em 0;
+}
+
+h1 {
+  font-size: 280%;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin: 0;
+}
+h1 span {
+  display: block;
+}
+h2 {
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 100%;
+  font-weight: normal;
+}
+h3 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3%;
+  row-gap: 1em;
+  padding: 0;
+  list-style: none;
+  margin: 2em 0;
+}
+
+.portrait {
+  border-radius: 50%;
+  max-width: 70%;
+}
+
+.name-role {
+  margin: 2.65em 0;
+}
+.role {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  margin-top: 1em;
+}
+
+.items > li > .prefix {
+  display: block;
+  border-bottom: solid 1px #ccc;
+  margin-right: 40%;
+}
+.items > li > h3 {
+  display: block;
+  font-size: 120%;
+  font-weight: 500;
+  margin: 0.3em 0 0 0;
+}
+.items > li > p,
+.items > li > ul {
+  margin: 0.6em 0 0 0;
+}
+.items > li > .suffix {
+  font-style: italic;
+}
+.items > li > .footer {
+  margin: 0.6em 0 0 0;
+}
+
+.skills .items {
+  display: flex;
+  flex-flow: column wrap;
+  height: 33vw;
+}
+.skills .items > li {
+  width: 31%;
+}
+.skills .items ul {
+  padding: 0;
+  list-style: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 15.6px;
+  }
+  body {
+    max-width: 1200px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 15px;
+    margin: 15px auto;
+  }
+  sidebar {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 3em;
+  }
+  .portrait {
+    max-width: 50%;
+  }
+  .skills .items {
+    height: 48vw;
+  }
+  sidebar {
+    margin-top: 0;
+    padding-top: 3em;
+  }
+  .skills .items {
+    display: flex;
+    flex-flow: column wrap;
+    height: 396px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  body {
+    flex-direction: column-reverse;
+    font-size: 1.8vw;
+  }
+  sidebar {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 3em;
+  }
+  .portrait {
+    max-width: 50%;
+  }
+  .skills .items {
+    height: 48vw;
+  }
+}
+@media only screen and (max-width: 440px) {
+  body {
+    font-size: 2.5vw;
+  }
+  .skills .items {
+    height: 100vw;
+  }
+  .skills .items li {
+    width: 50%;
+  }
+}
+@media (prefers-color-scheme: light) {
+  sidebar {
+    background: rgb(110, 0, 157);
+    background: linear-gradient(
+      149deg,
+      rgba(16, 0, 27, 1) 0%,
+      rgba(110, 0, 157, 1) 50%,
+      rgba(168, 97, 198, 1) 100%
+    );
+  }
+  html {
+    background: #eee;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  sidebar {
+    background: rgb(16, 0, 27);
+    background: linear-gradient(
+      149deg,
+      rgba(168, 97, 198, 1) 0%,
+      rgba(110, 0, 157, 1) 50%,
+      rgba(16, 0, 27, 1) 100%
+    );
+  }
+  html {
+    background: #444;
+  }
+  body {
+    background: black;
+    color: white;
+  }
+}
+@media print {
+  sidebar {
+    background: rgb(23, 23, 23);
+    background: linear-gradient(
+      149deg,
+      rgb(23, 23, 23) 0%,
+      rgba(122, 122, 122, 1) 100%
+    );
+  }
+  body {
+    background: white;
+    color: black;
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    -webkit-print-color-adjust: exact !important;
+    height: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
+}
