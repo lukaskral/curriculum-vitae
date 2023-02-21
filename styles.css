@@ -30,7 +30,7 @@ sidebar {
   );
   color: white;
   padding: 3%;
-  padding-top: 15.5em;
+  padding-top: 15.6em;
 }
 sidebar h2 {
   border-color: white;
@@ -129,7 +129,7 @@ h3 {
 .items > li > .suffix {
   font-style: italic;
   font-weight: 600;
-  color: rgb(110, 0, 157);
+  color: rgb(0 103 157);
 }
 .items > li > .footer {
   margin: 0.6em 0 0 0;
@@ -215,12 +215,12 @@ h3 {
 }
 @media (prefers-color-scheme: light) {
   sidebar {
-    background: rgb(110, 0, 157);
+    background: rgb(0 103 157);
     background: linear-gradient(
       149deg,
       rgba(16, 0, 27, 1) 0%,
-      rgba(110, 0, 157, 1) 50%,
-      rgba(168, 97, 198, 1) 100%
+      rgb(0 103 157) 50%,
+      rgb(97 198 173) 100%
     );
   }
   html {
@@ -233,11 +233,11 @@ h3 {
 }
 @media (prefers-color-scheme: dark) {
   sidebar {
-    background: rgb(16, 0, 27);
+    background: rgb(0 103 157);
     background: linear-gradient(
-      149deg,
-      rgba(168, 97, 198, 1) 0%,
-      rgba(110, 0, 157, 1) 50%,
+      223deg,
+      rgb(97 198 173) 0%,
+      rgb(0 73 111) 50%,
       rgba(16, 0, 27, 1) 100%
     );
   }
@@ -249,17 +249,16 @@ h3 {
     color: white;
   }
   .items > li > .suffix {
-    color: rgb(168, 97, 198);
+    color: rgb(97 198 173);
   }
 }
 @media print {
   sidebar {
-    background: rgb(23, 23, 23);
-    background: linear-gradient(
-      149deg,
-      rgb(23, 23, 23) 0%,
-      rgba(122, 122, 122, 1) 100%
-    );
+    background: white;
+    color: black;
+  }
+  sidebar h2 {
+    border-color: black;
   }
   body {
     background: white;
