@@ -135,6 +135,15 @@ h3 {
   margin: 0.6em 0 0 0;
 }
 
+.items.tiny {
+  display: flex;
+  flex-basis: 100%;
+  font-size: 80%;
+}
+.items.tiny > li {
+  width: 22%;
+}
+
 .skills .items {
   display: flex;
   flex-flow: column wrap;
